@@ -1,14 +1,15 @@
 import { createStore } from 'vuex'
 
-export default createStore({
-  state: {
+const store = createStore({
+  state:{
+      points:0
   },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
+  mutations:{
+      updatePoints(state,payload){
+      state.points +=payload
+      }
   }
 })
+
+
+export default store
